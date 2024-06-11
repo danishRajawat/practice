@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #7ADFFF;
+}
+
+.wrapper {
+    max-width: 1200px;
+    min-height: 946px;
+    margin: 52px auto;
+
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "Tleft Tleft Tleft lamba"
+    "Bleft Bleft Bleft lamba"
+    "Bleft Bleft Bleft lamba"
+    ;
+}
+
+.box-1 {
+    grid-area: Tleft;
+    background-color: #4F8EEC;
+
+}
+.box-2{
+    grid-area: Bleft;
+    background-color: #0A1E3C;
+}
+.box-3{
+grid-area: lamba;
+background-color: #005C79;
+}
+
+@media screen and  (width < 450px) {
+    .wrapper {
+      
+        margin: 24px 16px;
+     
+    }
+    .grid {
+      
+        gap: 16px;
+        grid-template-areas:
+        "Tleft"
+        "Bleft "
+        "lamba"
+        ;
+    }
+}
